@@ -16,6 +16,6 @@ spec:
       containers:
         - name: nginx
           imagePullPolicy: Always
-          image: aputra/nginx-lesson159
+          image: mwinel/nginx-devops-lesson
           ports:
             - containerPort: 80

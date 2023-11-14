@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - aputra/nginx-lesson159:v0.3.1

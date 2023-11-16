@@ -6,7 +6,7 @@ images:
   - name: mwinel/nginx-devops-lesson
     newTag: v0.1.0
 resources:
-  - ../../../my-app-base
+  - ../../../base
 patches:
   - target:
       kind: Deployment

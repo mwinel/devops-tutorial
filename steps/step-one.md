@@ -374,7 +374,7 @@ images:
   - name: mwinel/nginx-devops-lesson
     newTag: v0.1.0
 resources:
-  - ../../../my-app-base
+  - ../../../base
 ```
 
 ### Initial Commit
@@ -383,10 +383,10 @@ Commit all the files and push them to the GitOps repository.
 
 ### Add the ArgoCD application deployment resource
 
-Create a folder named `application`. Inside it add a file called `application.yaml`. This file is a configuration for an Argo CD Application, defining how an application should be deployed and synchronized on a Kubernetes cluster.
+Create a folder named `app`. Inside it add a file called `application.yaml`. This file is a configuration for an Argo CD Application, defining how an application should be deployed and synchronized on a Kubernetes cluster.
 
 ```bash
-# application/application.yaml
+# app/application.yaml
 
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -422,7 +422,7 @@ spec:
 Run the following command to create an initial deployment of your applicaction.
 
 ```bash
-kubectl apply -f application/application.yaml
+kubectl apply -f app/application.yaml
 ```
 
 Check your argocd dashboard to verify your app was deployed successfully.

@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: ssh://git@github.com:mwinel/devops-tutorial.git
+    repoURL: https://github.com/mwinel/devops-tutorial
     targetRevision: main # branch to track
     path: environments/staging/my-app
   destination:

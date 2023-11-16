@@ -1,7 +1,7 @@
 namespace: staging
 replicas:
   - name: nginx-deployment
-    count: 2
+    count: 1
 images:
   - name: mwinel/nginx-devops-lesson
     newTag: v0.1.0

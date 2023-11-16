@@ -315,7 +315,7 @@ metadata:
   name: default
 ```
 
-Now add a `deployment.yaml` file. This file likely contains the YAML configuration for deploying a Kubernetes Deployment, which is used to create and manage a set of replicated application pods.
+Now add a `deployment.yaml` file. This file contains the YAML configuration for deploying a Kubernetes Deployment, which is used to create and manage a set of replicated application pods.
 
 ```bash
 # base/deployment.yaml

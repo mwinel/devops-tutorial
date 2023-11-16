@@ -7,3 +7,10 @@ images:
     newTag: v0.1.0
 resources:
   - ../../../my-app-base
+patches:
+  - target:
+      kind: Deployment
+    patch: |-
+      - op: add
+        path: /spec/template/spec/imagePullSecrets
+        value: [{ name: dockerconfigjson }]

@@ -10,11 +10,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/mwinel/devops-tutorial
-    targetRevision: main
+    repoURL: ssh://git@github.com:mwinel/devops-tutorial.git
+    targetRevision: main # branch to track
     path: environments/staging/my-app
   destination:
-    server: https://kubernetes.default.svc
+    server: https://kubernetes.default.svc # cluster where argocd is running
   syncPolicy:
     automated:
       prune: true

@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - mwinel/nginx-devops-lesson:v0.1.0

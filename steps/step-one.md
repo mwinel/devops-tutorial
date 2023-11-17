@@ -2,13 +2,13 @@
 
 Download the Helm binary suitable for your operating system from the [official Helm GitHub releases page](https://github.com/helm/helm/releases). Select the version that suits your needs and download the appropriate binary.
 
-### Initialize Helm
+<!-- ### Initialize Helm
 
 Run the following command to initialize Helm and install Tiller, which is the server-side component of Helm that runs inside your Kubernetes cluster:
 
 ```bash
 helm init
-```
+``` -->
 
 ### Verify Installation
 
@@ -202,7 +202,7 @@ updater-argocd-image-updater-5b5c5575bd-r5v4j    1/1     Running   0          87
 
 ### Download Argo CD CLI
 
-Download the latest Argo CD version from [https://github.com/argoproj/argo-cd/releases/latest](https://github.com/argoproj/argo-cd/releases).
+Download the latest Argo CD version from [https://github.com/argoproj/argo-cd/releases/latest](https://argo-cd.readthedocs.io/en/stable/cli_installation/).
 
 ### Expose the ArgoCD server
 

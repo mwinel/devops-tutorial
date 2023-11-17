@@ -395,6 +395,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: mwinel/nginx-devops-lesson:~v0.1
+    argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

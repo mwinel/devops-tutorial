@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: mwinel/nginx-devops-lesson:~v0.3
+    argocd-image-updater.argoproj.io/write-back-method: git
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mwinel/devops-tutorial
+    targetRevision: main # branch to track
+    path: environments/staging/my-app
+  destination:
+    server: https://kubernetes.default.svc # cluster where argocd is running
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=false
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
